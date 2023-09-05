@@ -60,6 +60,7 @@
   height: 4px;
   width: 50px;
   background-color: #333;
+  z-index: 4;
 }
 
 .minute-hand {
@@ -67,6 +68,7 @@
   height: 3px;
   width: 70px;
   background-color: #666;
+  z-index: 3;
 }
 
 .second-hand {
@@ -74,4 +76,5 @@
   height: 2px;
   width: 75px;
   background-color: #f00;
+  z-index: 1;
 }
