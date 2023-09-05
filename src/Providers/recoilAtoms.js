@@ -4,6 +4,15 @@ import { v1 } from "uuid";
 export const clockState = atom({
   key: `clockState-${v1()}`,
   default: new Date(),
+  effects: [
+    ({setSelf}) => {
+      const intervalId = setInterval(() => {
+        setSelf(new Date());
+      }, 1000);
+
+      return () => clearInterval(intervalId);
+    },
+  ],
 });
 
 export const positionState = atom({

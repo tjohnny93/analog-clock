@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRecoilState } from "recoil";
 import {
   clockState,
@@ -8,7 +8,7 @@ import {
 import "../Styles/Clock.css";
 
 const Clock = () => {
-  const [time, setTime] = useRecoilState(clockState);
+  const [time] = useRecoilState(clockState);
   const [ , setTooltipPosition] = useRecoilState(positionState);
   const [ , setShowTooltip] = useRecoilState(tooltipVisibilityState);
 
@@ -49,14 +49,6 @@ const Clock = () => {
   const handleMouseLeave = () => {
     setShowTooltip(false);
   };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [setTime]);
 
   return (
     <div className="clock-wrapper">
