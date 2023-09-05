@@ -76,7 +76,7 @@ const Clock = () => {
           style={{ transform: `rotate(${minuteDeg}deg)` }}
         ></div>
         <div
-          className="hand second-hand"
+          className={`hand second-hand`}
           style={{ transform: `rotate(${secondDeg}deg)` }}
         ></div>
       </div>

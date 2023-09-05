@@ -44,8 +44,6 @@
 }
 
 .hand {
-  transition: all 0.05s;
-  transition-timing-function: ease-in;
   position: absolute;
   width: 50%;
   height: 2px;
